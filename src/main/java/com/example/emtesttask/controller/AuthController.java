@@ -81,7 +81,7 @@ public class AuthController {
         } catch (Exception e) {
             e.printStackTrace();
             log.error("An error has occurred when registering user");
-            return new ResponseEntity<>("An error has occurred", HttpStatus.valueOf("500"));
+            return new ResponseEntity<>("An error has occurred", HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
 }
